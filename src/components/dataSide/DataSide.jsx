@@ -21,7 +21,7 @@ const DataSide = ({ name }) => {
   ];
   const day = time.getDay();
   return (
-    <Container>
+    data ? (  <Container>
       <Img
         src={`http://openweathermap.org/img/wn/${data?.weather[0]?.icon}@2x.png`}
         alt={"weather icon"}
@@ -40,7 +40,8 @@ const DataSide = ({ name }) => {
         />
         <DataHeader className="footer">{name}</DataHeader>
       </Footer>
-    </Container>
+    </Container>)
+  : (<></>)
   );
 };
 

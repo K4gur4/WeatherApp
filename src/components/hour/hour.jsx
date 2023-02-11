@@ -58,11 +58,14 @@ const options = {
 }
   Chart.register(LineElement, CategoryScale, LinearScale, PointElement,Legend,Tooltip);
 
-  return <Container>
+  return (
+    hourly && 
+   <Container>
     <Suspense fallback = {<h1>Loading...</h1>}>
     <Line data={data} options={options} />
     </Suspense>
-  </Container>;
+  </Container>
+  )
 };
 
 export default Hour;

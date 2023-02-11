@@ -3,15 +3,18 @@ import {Container,MainData,NavBar,Wrapper} from './mainStyle'
 import {Link,Outlet} from  'react-router-dom' 
 import { Suspense } from 'react';
 import Sidebar from '../sidebar/sideBar';
-const Main= (city)=>{
+const Main= ()=>{
+    const setClass = (e)=>{
+        console.log();
+    }
 return ( 
     <Container>
         <Sidebar/>
     <Wrapper>
    <NavBar>
-    <Link className='item' to={'/'}>Day</Link>
-    <Link className='item' to={'/week'}>Week</Link>
-    <Link className='item' to={'/hour'}>Hour</Link>
+    <Link id='0' className='item' to={'/'}>Day</Link>
+    <Link id='1' className='item' to={'/week'}>Week</Link>
+    <Link id='2' className='item' to={'/hour'}>Hour</Link>
    </NavBar>
 <MainData>
     <Suspense fallback={<div>Loading...</div>}>

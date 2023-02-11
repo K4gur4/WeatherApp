@@ -24,10 +24,9 @@ const Sidebar = () => {
       setActive(false)
     } else {
       try {
-        const url = `http://api.openweathermap.org/geo/1.0/direct?q=${value},VN&limit=5&appid=ac2e59088cbe65dddd76cc799a3f7efb`;
+        const url = `http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=5&appid=ac2e59088cbe65dddd76cc799a3f7efb`;
         await axios.get(url).then((response) => {
           setData(response.data);
-          console.log("data input", response.data);
         });
       } catch (error) {
         console.log(error.message);
@@ -48,6 +47,7 @@ const getLoaction = async (e)=>{
   }
 }
   const search = (e) => {
+    setActive(false)
     const value = e.target.value;
     setCity(value);
     if (typing.current) {

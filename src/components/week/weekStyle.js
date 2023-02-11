@@ -40,6 +40,9 @@ export const Item = styled.li`
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  &:hover{
+    background-color: lightblue;
+  }
 `;
 
 export const Img = styled.img`
