@@ -34,7 +34,6 @@ const Sidebar = () => {
     }
   };
 const getLoaction = async (e)=>{
-  if(e.key==='Enter'){
     setActive(true)
     try {
     const  locationUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${datas[0]?.lat}&lon=${datas[0]?.lon}&units=metric&lang=vi&appid=ac2e59088cbe65dddd76cc799a3f7efb`
@@ -44,7 +43,6 @@ const getLoaction = async (e)=>{
   } catch (error) {
       console.log(error.message);
     }
-  }
 }
   const search = (e) => {
     setActive(false)
@@ -55,6 +53,7 @@ const getLoaction = async (e)=>{
     }
     typing.current = setTimeout(() => {
       getApi(value);
+      getLoaction()
     }, 200);
   };
 

@@ -79,7 +79,7 @@ const Today = () => {
           <ItemIcon>
             <IoMdSpeedometer style={{ fontSize: "70px", color: "yellow" }} />
           </ItemIcon>
-          <ItemDesc>{today.visibility} km</ItemDesc>
+          <ItemDesc>{today.visibility/1000} km</ItemDesc>
         </ItemData>
       </Item>
       <Item>
