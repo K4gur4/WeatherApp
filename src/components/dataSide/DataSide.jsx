@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { Container, DataDesc, DataHeader, Img,Footer } from "./dataSideStyle";
 const DataSide = ({ name }) => {
   const data = useSelector((state) => state.weatherSlice.data.current);
-  console.log(data);
   const time = new Date(data?.dt * 1000);
   const weekDay = time.toLocaleString("en-US", {
     hour: "numeric",

@@ -1,9 +1,9 @@
 
-import {Container,MainData,NavBar,Wrapper} from './mainStyle'
+import {Container,MainData,NavBar,Wrapper} from './mainBarstyle'
 import {Link,Outlet} from  'react-router-dom' 
 import { Suspense } from 'react';
 import Sidebar from '../sidebar/sideBar';
-const Main= ()=>{
+const MainBar= ()=>{
     const setClass = (e)=>{
         console.log();
     }
@@ -26,4 +26,4 @@ return (
 )
 }
 
-export default Main
+export default MainBar

@@ -23,7 +23,6 @@ const Hour = () => {
   );
   const temps= hourly?.map ( (data)=>data?.temp.toFixed(1))
   const feel= hourly?.map ( (data)=>data?.feels_like.toFixed(1))
-  console.log(temps);
 const data = {
     labels : hour,
     datasets: [{

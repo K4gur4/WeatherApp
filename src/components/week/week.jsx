@@ -36,7 +36,7 @@ const Week = () => {
     <Container>
       <ItemContainer>
         {dailyItem?.map((day, index) => (
-          <Item isSelected={true} check key={index} onClick={() => getId(day)}>
+          <Item key={index} onClick={() => getId(day)}>
             <DayFomat dt={day.dt} />
             <ItemData>
               <Img

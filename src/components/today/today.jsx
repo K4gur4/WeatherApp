@@ -17,7 +17,6 @@ import { IoMdSpeedometer, IoMdThermometer } from "react-icons/io";
 
 const Today = () => {
   const today = useSelector((state) => state.weatherSlice.data.current);
-  console.log(today);
   const sunRise = new Date(today?.sunrise * 1000).toLocaleString("en-US", {
     hour: "numeric",
     minute: "numeric",
